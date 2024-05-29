@@ -5,7 +5,7 @@ public class Hello {
         int a = 100;
 
         if (a < 100) {
-            System.out.prontln("하하하");
+            System.out.println("하하하");
         }
     }
 }
