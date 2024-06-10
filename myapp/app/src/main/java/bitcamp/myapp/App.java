@@ -4,6 +4,8 @@
 
 package bitcamp.myapp;
 
+import java.util.InputMismatchException;
+
 public class App {
     public static void main(String[] args) {
         java.util.Scanner keyboardScanner = new java.util.Scanner(System.in);
@@ -40,17 +42,21 @@ public class App {
         int menuNo;
         while (true) {
             System.out.print("> ");
-            menuNo = keyboardScanner.nextInt();
+            try {
+                menuNo = keyboardScanner.nextInt();
 
-            if (menuNo >= 1 && menuNo <= menus.length) {
-                if (menus[menuNo - 1] == "종료") {
-                    break;
+                if (menuNo >= 1 && menuNo <= menus.length) {
+                    if (menus[menuNo - 1] == "종료") {
+                        break;
+                    }
+                    System.out.println(menus[menuNo - 1]);
+                } else {
+                    System.out.println("유효한 메뉴 번호가 아닙니다.");
                 }
-                System.out.println(menus[menuNo - 1]);
-        } else {
-            System.out.println("메뉴 번호가 옳지 않습니다.");
-        }
-
+            } catch (InputMismatchException ex) {
+                System.out.println("숫자로 메뉴 번호를 입력하세요.");
+                keyboardScanner.next();
+            }
     }
 
 
