@@ -1,28 +1,21 @@
 package study.lang.mysolve;
 
+// 정수 num1, num2가 매개변수로 주어질 때, num1를 num2로 나눈 나머지를 return 하도록 solution 함수를 완성하기
+
 public class solve0005 {
+  public int solution(int num1, int num2) {
+    return num1 % num2;
+  }
+
   public static void main(String[] args) {
-    System.out.println("-------- 정수 리터럴");
-    System.out.println(78); // 10진수
-    System.out.println(+78);
-    System.out.println(-78);
-    System.out.println(0116); // 8진수
-    System.out.println(0x4e); // 16진수
-    System.out.println(0b01001110); // 2진수
+    solve0005 sol = new solve0005();
 
-    System.out.println("-------- 부동소수점 리터럴");
-    System.out.println(3.14);
-    System.out.println(31.4e-1);
+    // 예제 테스트
+    int num1 = 7;
+    int num2 = 5;
 
-    System.out.println("-------- 논리 리터럴");
-    System.out.println(true);
-    System.out.println(false);
+    int result = sol.solution(num1, num2);
+    System.out.println("수의 나머지: " + result); // 출력: -1
 
-    System.out.println("-------- 문자 리터럴");
-    System.out.println('가');
-
-    System.out.println("-------- 문자열 리터럴");
-    System.out.println("코딩 실습!");
   }
 }
-

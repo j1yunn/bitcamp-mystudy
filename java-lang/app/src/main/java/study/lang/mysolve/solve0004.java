@@ -1,29 +1,25 @@
 package study.lang.mysolve;
 
+// 정수 num1과 num2가 매개변수로 주어질 때, 두 수가 같으면 1 다르면 -1을 return 하도록 solution 함수를 완성하기
 
-// # 주석 - Javadoc 주석
-//
-// - "java document comment(doc comment)"
-// - javadoc에서 HTML 문서를 만들 때 사용하는 주석이다.
-// - 주로 API 문서를 자동 생성할 때 사용한다.
-// - 클래스나 메서드, 변수 선언에 붙일 수 있다.
-//
-
-/**
- * 클래스에 대한 설명
- */
 public class solve0004 {
-  /**
-   * 변수에 대한 설명 변수 선언 앞에 설명을 붙여 놓으면 나중에 HTML 문서를 만들 때 추출할 수 있다.
-   */
-  public static String message = "Hello, world!";
+  public int solution(int num1, int num2) {
+    if (num1 == num2) {
+      return 1;
+    } else {
+      return -1;
+    }
+  }
 
-  /**
-   * 메서드에 대한 설명 메서드에 대한 설명을 여기에 붙여 놓으면 나중에 HTML 문서를 만들 때 추출할 수 있다.
-   *
-   * @param args 애플리테이션 아규먼트 값을 보관한 배열
-   */
   public static void main(String[] args) {
-    System.out.println(message);
+    solve0004 sol = new solve0004();
+
+    // 예제 테스트
+    int num1 = 6;
+    int num2 = 3;
+
+    int result = sol.solution(num1, num2);
+    System.out.println("두 수가 같으면 1, 다르면 -1: " + result); // 출력: -1
   }
 }
+
