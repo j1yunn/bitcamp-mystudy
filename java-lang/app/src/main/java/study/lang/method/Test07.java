@@ -1,8 +1,11 @@
 package study.lang.method;
 
+import java.util.Scanner;
+
 public class Test07 {
   public static void main(String[] args) {
-    System.out.println(sum(100000));
+    // System.out.println(sum(100000));
+    new Scanner(System.in).nextInt();
   }
 
   static int sum(int n) {
@@ -12,4 +15,6 @@ public class Test07 {
     }
     return n + sum(n - 1);
   }
+
+
 }
