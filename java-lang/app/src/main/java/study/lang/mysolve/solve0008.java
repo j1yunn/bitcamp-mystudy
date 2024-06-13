@@ -11,7 +11,7 @@ public class solve0008 {
     solve0008 sol = new solve0008();
 
     // 예제 테스트
-    int num1 = 6;
+    int num1 = 1486;
     int num2 = 8;
 
     // solution 메서드 호출 및 결과 출력
