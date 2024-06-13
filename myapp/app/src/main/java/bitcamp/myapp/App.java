@@ -16,6 +16,10 @@ public class App {
             "종료"
     };
 
+
+    static String[] menus = new String[] {"등록", "목록", "조회", "변경", "삭제"};
+    static String[] memberMenus = new String[] {"등록", "목록", "조회", "변경", "삭제"};
+
     public static void main(String[] args) {
 
         printMenu(); // 메서드에 묶인 코드를 실행하는 것을 "메서드를 호출(call)한다"라고 부른다.
@@ -23,7 +27,11 @@ public class App {
         String command;
         while (true) {
             try {
-                command = prompt();
+                command = prompt("메인");
+
+                for (int i = 0; i < menus.length; i++) {
+                    if (menus[i].equals("종료")) {
+                        System.out.printf("%s%d. %s%s\n", (boldAnsi + redAnsi), (i + 1), menus[i], resetAnsi);
 
                 if (command.equals("menu")) {
                     printMenu();
@@ -36,11 +44,50 @@ public class App {
                     } else if (menuTitle.equals("종료")) {
                         break;
                     } else {
+                        if (menuTitle.equals("회원")) {
+                            System.out.println(("[회원]"));
+                            System.out.println(("1. 등록"));
+                            System.out.println(("2. 목록"));
+                            System.out.println(("3. 조회"));
+                            System.out.println(("4. 변경"));
+                            System.out.println(("5. 삭제"));
+                            System.out.println(("9. 이전"));
+                            while (true) {
+                                command = prompt("메인/회원");
+                                if (command.equals("9")) {
+                                    break;
+                                } else {
+                                    System.out.println(command);
+                                }
+                            }
+                        }
+
+                    } else {
+                        switch (menuTitle) {
+                            case "회원": processMenu(menuTitle, memberMenus); break;
+                            case "팀"
+                                break;
+                            case "회원"
+                                break;
+                            case "팀"
+                                break;
+                            case "프로젝트"
+                                break;
+                            case "게시판"
+                                break;
+
+
+                 static String[] menus = new String[] {"회원", "팀", "프로젝트", "게시판", "도움말", "종료"}
+
+                        }
+                    }
                         System.out.println(menuTitle);
                     }
                 }
             } catch (NumberFormatException ex) {
                 System.out.println("숫자로 메뉴 번호를 입력하세요.");
+
+                if
             }
         }
 
@@ -69,12 +116,16 @@ public class App {
         }
 
         System.out.println(boldAnsi + line + resetAnsi);
+        for (int i = 0; i < menus.length; i++) {
+                System.out.printf("%s%d. %s%s\n", (boldAnsi + redAnsi), (i + 1), menus[i], resetAnsi);
     }
 
-    static String prompt() {
-        System.out.print("> ");
+    static String prompt(String title) {
+        System.out.printf("\%s", "> ");
         return keyboardScanner.nextLine();
     }
+
+        static void processMenu(String.)
 
     static boolean isValidateMenu(int menuNo) {
         return menuNo >= 1 && menuNo <= menus.length;
