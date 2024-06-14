@@ -8,10 +8,10 @@ public class App {
 
     static String[] mainMenus = new String[] {"회원", "팀", "프로젝트", "게시판", "도움말", "종료"};
     static String[][] subMenus = {
-            {"등록a", "목록", "조회", "변경", "삭제"},
-            {"등록b", "목록", "조회", "변경", "삭제"},
-            {"등록c", "목록", "조회", "변경", "삭제"},
-            {"등록d", "목록", "조회", "변경", "삭제"}
+            {"등록", "목록", "조회", "변경", "삭제"},
+            {"등록", "목록", "조회", "변경", "삭제"},
+            {"등록", "목록", "조회", "변경", "삭제"},
+            {"등록", "목록", "조회", "변경", "삭제"}
     };
 
     public static void main(String[] args) {
@@ -101,7 +101,19 @@ public class App {
             if (command.equals("menu")) {
                 printSubMenu(menuTitle, menus);
                 continue;
-            } else if (command.equals("9")) { // 이전 메뉴 선택
+            } else {
+                switch (menuTitle) {
+                    case "회원" : executeBoardCommand(subMenuTitle); break;
+                    case "팀" : executeBoardCommand(subMenuTitle); break;
+                    case "회원" : executeBoardCommand(subMenuTitle); break;
+                    case "게시판" : executeBoardCommand(subMenuTitle); break;
+                    default:
+                        System.out.printf("")
+                }
+            }
+
+
+                if (command.equals("9")) { // 이전 메뉴 선택
                 break;
             }
 
@@ -119,3 +131,20 @@ public class App {
         }
     }
 }
+
+    static void executeUserCommand(String command) {
+        System.out.printf("회원 %s\n", command);
+    }
+
+static void executeUserCommand(String command) {
+    System.out.printf("팀 %s\n", command);
+}
+static void executeUserCommand(String command) {
+    System.out.printf("프로젝트 %s\n", command);
+}
+static void executeUserCommand(String command) {
+    System.out.printf("게시판 %s\n", command);
+}
+
+
+String name = prompt ("")
