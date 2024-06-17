@@ -2,17 +2,18 @@ package study.oop.clazz.vo;
 
 public class Score {
   public String name;
-  public int kor;
-  public int eng;
-  public int math;
-  public int sum;
-  public float aver;
+  private int kor;
+  private int eng;
+  private int math;
+  private int sum;
+  private float aver;
 
   public Score(String name, int kor, int eng, int math) {
     this.name = name;
     this.kor = kor;
     this.eng = eng;
     this.math = math;
+    this.compute();
   }
 
   public void compute() {
@@ -20,4 +21,46 @@ public class Score {
     this.aver = (float) this.sum / 3;
   }
 
+  public void setName(String name) {
+    this.name = name;
+  }
+
+  public String getName() {
+    return this.name;
+  }
+
+  public void setKor(int kor) {
+    this.kor = kor;
+    this.compute();
+  }
+
+  public int getKor() {
+    return this.kor;
+  }
+
+  public void setEng(int eng) {
+    this.eng = eng;
+    this.compute();
+  }
+
+  public int getEng() {
+    return this.eng;
+  }
+
+  public void setMath(int math) {
+    this.math = math;
+    this.compute();
+  }
+
+  public int getMath() {
+    return this.math;
+  }
+
+  public int getSum() {
+    return this.sum;
+  }
+
+  public float getAver() {
+    return this.aver;
+  }
 }
