@@ -3,9 +3,10 @@ package bitcamp.myapp.vo;
 import java.util.Date;
 
 public class Board {
+
     private String title;
     private String content;
-    private java.util.Date createdDate;
+    private Date createdDate;
     private int viewCount;
 
     public String getTitle() {

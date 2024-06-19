@@ -10,10 +10,10 @@ public class App {
 
   static String[] mainMenus = new String[]{"회원", "프로젝트", "게시판", "도움말", "종료"};
   static String[][] subMenus = {
-      {"등록", "목록", "조회", "변경", "삭제"},
-      {"등록", "목록", "조회", "변경", "삭제"},
-      {"등록", "목록", "조회", "변경", "삭제"},
-      {"등록", "목록", "조회", "변경", "삭제"}
+          {"등록", "목록", "조회", "변경", "삭제"},
+          {"등록", "목록", "조회", "변경", "삭제"},
+          {"등록", "목록", "조회", "변경", "삭제"},
+          {"등록", "목록", "조회", "변경", "삭제"}
   };
 
 
@@ -127,9 +127,5 @@ public class App {
         System.out.println("숫자로 메뉴 번호를 입력하세요.");
       }
     }
-  }
-
-  static void executeBoardCommand(String command) {
-    System.out.printf("게시판 %s\n", command);
   }
 }

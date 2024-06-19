@@ -50,7 +50,7 @@ public class ProjectCommand {
     for (int i = 0; i < projectLength; i++) {
       Project project = projects[i];
       System.out.printf("%d %s %s ~ %s\n",
-          (i + 1), project.getTitle(), project.getStartDate(), project.getEndDate());
+              (i + 1), project.getTitle(), project.getStartDate(), project.getEndDate());
     }
   }
 
