@@ -5,11 +5,11 @@ public class TextBlockExample {
     String str1 = "" + "{\n" + "\t\"id\":\"winter\",\n" + "\t\"name\":\"눈송이\"\n" + ")";
 
     String str2 = """
-        {
-          "id":"winter",
-          "name":"눈송이"
-        }
-          """;
+            {
+              "id":"winter",
+              "name":"눈송이"
+            }
+        """;
 
     System.out.println(str1);
     System.out.println("-------------------------");
