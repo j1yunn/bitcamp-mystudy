@@ -1,6 +1,7 @@
 package bitcamp.myapp.vo;
 
 import bitcamp.myapp.util.ArrayList;
+
 import java.util.Objects;
 
 public class Project {
