@@ -7,15 +7,12 @@ public class Test01 {
 
   public static void main(String[] args) {
 
-    class PrinterImpl implements Printer {
+    new Printer() {
       @Override
       public void print() {
         System.out.println("Hello!");
       }
-    }
-
-    Printer obj = new PrinterImpl();
-    obj.print();
+    }.print();
 
 
   }
