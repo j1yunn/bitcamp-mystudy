@@ -1,33 +1,30 @@
 package bitcamp.menu;
 
-import java.util.Objects;
+import bitcamp.myapp.command.Command;
 
-public class MenuItem implements Menu {
+public class MenuItem extends AbstractMenu {
 
-  private String title;
+  Command command;
 
   public MenuItem(String title) {
-    this.title = title;
+    super(title);
+  }
+
+  public MenuItem(String title, Command command) {
+    super(title);
+    this.command = command;
+  }
+
+  public void setCommand(Command command) {
+    this.command = command;
   }
 
   @Override
   public void execute() {
-    System.out.println(title);
-  }
-
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) {
-      return true;
+    if (command != null) {
+      command.execute(title);
+    } else {
+      System.out.println(title);
     }
-    if (!(o instanceof MenuItem menuItem)) {
-      return false;
-    }
-    return Objects.equals(title, menuItem.title);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hashCode(title);
   }
 }
