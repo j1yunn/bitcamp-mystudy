@@ -27,7 +27,7 @@ public class Test01 {
     };
     p2.play();
 
-    // 3) 익명 클래스2
+    // 3) 익명 클래스 + 메서드 호출
     new Player() {
       @Override
       public void play() {
@@ -41,9 +41,13 @@ public class Test01 {
     };
     p3.play();
 
-    // 5) 람다2
+    // 5) 람다 + 중괄호 생략
     Player p4 = () -> System.out.println("람다2");
     p4.play();
+
+    // () -> System.out.println("람다2").play();
+    // p4.play();
+
 
   }
 }
