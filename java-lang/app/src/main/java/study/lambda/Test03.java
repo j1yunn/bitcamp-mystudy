@@ -1,6 +1,7 @@
 package study.lambda;
 
 public class Test03 {
+
   interface Calculator {
     int plus(int a, int b);
   }
@@ -11,47 +12,48 @@ public class Test03 {
 
   public static void main(String[] args) {
     // 1) 일반 클래스
-    class MyCalc implements Calculator {
+    class C implements Calculator {
       @Override
       public int plus(int a, int b) {
+        // TODO Auto-generated method stub
         return a + b;
       }
     }
-    Calculator c1 = new MyCalc();
-    test(c1);
-
+    Calculator c = new C();
+    test(c);
 
     // 2) 익명 클래스
     Calculator c2 = new Calculator() {
       @Override
       public int plus(int a, int b) {
+        // TODO Auto-generated method stub
         return a + b;
       }
     };
     test(c2);
 
-
     // 3) 익명 클래스 직접 대입
-    test(new Calculator () {
+
+    test(new Calculator() {
       @Override
       public int plus(int a, int b) {
+        // TODO Auto-generated method stub
         return a + b;
       }
-    }
-    test(c3);
+    });
 
     // 4) 람다
-    Calculator c4 = (a, b) -> {
+    Calculator c3 = (a, b) -> {
       return a + b;
     };
-    test(c4);
+    test(c3);
 
     // 5) 람다 + 중괄호 생략
-    Calculator c5 = (a, b) -> a + b;
-    test(c5);
+    Calculator c4 = (a, b) -> a + b;
+    test(c4);
 
-    // 5) 람다 직접 대입
+    // 6) 람다 직접 대입
     test((a, b) -> a + b);
-    }
+  }
 }
 
