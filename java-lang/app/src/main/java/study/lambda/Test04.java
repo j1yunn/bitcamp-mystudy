@@ -25,6 +25,7 @@ public class Test04 {
     return new My(rate);
   }
 
+
   // 1) 일반 클래스 + 로컬 클래스의 특징 이용
   static InterestCalculator create2(double rate) {
     class My implements InterestCalculator {
@@ -65,6 +66,7 @@ public class Test04 {
     InterestCalculator c = money -> money + (money * rate);
     return c;
   }
+
 
   // 6) 람다 직접 대입
   static InterestCalculator create6(double rate) {
