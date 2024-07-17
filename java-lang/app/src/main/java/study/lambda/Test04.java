@@ -21,7 +21,6 @@ public class Test04 {
         return money + (money * rate);
       }
     }
-
     return new My(rate);
   }
 
@@ -38,6 +37,7 @@ public class Test04 {
     return new My();
   }
 
+
   // 3) 익명 클래스
   static InterestCalculator create3(double rate) {
     InterestCalculator c = new InterestCalculator() {
@@ -50,6 +50,7 @@ public class Test04 {
     return c;
   }
 
+
   // 4) 익명 클래스 직접 대입
   static InterestCalculator create4(double rate) {
 
@@ -60,6 +61,7 @@ public class Test04 {
       }
     };
   }
+
 
   // 5) 람다
   static InterestCalculator create5(double rate) {
