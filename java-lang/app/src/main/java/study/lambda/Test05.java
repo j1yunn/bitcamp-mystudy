@@ -26,14 +26,17 @@ public class Test05 {
 
   public static void main(String[] args) {
 
-    class My implements Calculator {
+    class $1 implements Calculator {
       @Override
       public int compute(int x, int y) {
-        return x + y;
+        return MyCalculator.plus(x, y);
       }
     }
+    Calculator obj0 = new $1();
 
-    My obj = new My();
+    Calculator obj = (x, y) -> MyCalculator.plus(x, y);
+
     int result = obj.compute(100, 200);
+    System.out.println(result);
   }
 }
