@@ -2,6 +2,7 @@ package bitcamp.myapp.command.board;
 
 import bitcamp.myapp.command.Command;
 import bitcamp.myapp.vo.Board;
+
 import java.util.List;
 
 public class BoardListCommand implements Command {
