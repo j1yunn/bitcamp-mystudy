@@ -1,6 +1,5 @@
 package study.lang.method;
 
-
 public class Test02 {
   public static void main(String[] args) {
     m1("홍길동", 20);

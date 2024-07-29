@@ -2,17 +2,12 @@ package study.lang.method;
 
 public class Test09 {
   public static void main(String[] args) {
-    int[] values;
-    values = create();
-
-    System.out.println(values.length);
+    int[] values = new int[] {100, 110, 120};
+    m1(values);
     System.out.println(values[0]);
-    System.out.println(values[1]);
-    System.out.println(values[2]);
   }
 
-  static int[] create() {
-    int[] arr = new int[] {100, 200, 300};
-    return arr;
+  static void m1(int[] values) {
+    values[0] = 200;
   }
 }

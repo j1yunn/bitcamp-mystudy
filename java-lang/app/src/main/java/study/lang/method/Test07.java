@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Test07 {
   public static void main(String[] args) {
-    // System.out.println(sum(100000));
+    //System.out.println(sum(100000));
     new Scanner(System.in).nextInt();
   }
 

@@ -12,8 +12,8 @@ public class Test06 {
     // sum(10) = 10 + sum(9)
     //         = 10 + 9 + sum(8)
     //         = 10 + 9 + 8 + sum(7)
-    //         = 10 + 9 + 8 + ... + sum(1)
-    // sum(n)  = n + sum(n-1)
+    //         = 10 + 8 + 8 + ... + sum(1)
+    // sum(n)  = n + sum(n - 1)
     System.out.println(sum(10));
   }
 
@@ -23,4 +23,6 @@ public class Test06 {
     }
     return n + sum(n - 1);
   }
+
+
 }
