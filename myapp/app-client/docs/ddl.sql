@@ -24,3 +24,16 @@ insert into myapp_users(user_id, name, email, pwd) values
   (8, 'user8', 'user8@test.com', sha1('1111')),
   (9, 'user9', 'user9@test.com', sha1('1111')),
   (10, 'user10', 'user10@test.com', sha1('1111'));
+
+  create table myapp_boards (
+  board_id int not null,
+  title varchar(255) not null,
+  content text not null,
+  created_date datetime default now(),
+  view_count int default 0
+  );
+
+ alter table myapp_boards
+    add constraint primary key (board_id),
+    modify column board_id int not null auto_increment;
+     
