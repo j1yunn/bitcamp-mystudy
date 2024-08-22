@@ -13,6 +13,7 @@ public class User implements Serializable {
   private String password;
   private String tel;
 
+  //주석
   public User() {
   }
 
