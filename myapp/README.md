@@ -45,9 +45,46 @@
 ## 43. SQL 삽입 공격 차단하기
 ## 44. JDBC 코드를 캡슐화하기 
 ## 45. Mybatis 퍼시스턴스 프레임워크 사용하기
+
+- mybatis 프레임워크의 구동 원리 및 사용법
+- Spring Framework에 적용하는 방법
+- Mybatis의 Log4j 활성화 하기
+
+
 ## 46. DAO 객체를 자동 생성하기
-## 47. Application Server 아키텍처로 전환하기
-## 48. 멀티스레드 환경에서 DB 커넥션을 공유할 때의 문제점과 해결책
+
+- java.lang.reflect.Proxy 클래스 사용법
+- Reflection API를 사용하여 메서드 정보를 추출하기
+- GoF의 Factory Method 패턴 활용 
+
+
+
+
+## 46. Application Server 아키텍처로 전환하기
+
+- 애플리케이션 서버 아키텍처의 특징과 구현
+- Executor를 이용하여 스레드를 풀링하기
+
+
+
+
+## 45. 스레드 재사용하기 : 스레드풀(thread pool) 구현
+
+- Pooling 기법을 활용하여 스레드 객체를 관리하는 방법
+- 스레드를 재사용 하는 방법
+- GoF의 FlyWeight 디자인 패턴(풀링 기법)을 적용하여 스레드풀을 구현하는 방법
+
+## 46. 스레드 재사용하기 : 자바에서 제공하는 스레드풀(thread pool) 사용
+
+- Excutors/ExcutorService 사용법
+
+
+
+
+
+
+
+## 50. 여러 스레드가 DB 커넥션을 공유할 때의 문제점과 해결책 I
 
 - 여러 스레드에서 DB 커넥션 객체를 공유할 때의 문제점 이해
 - SQL 실행할 때 마다 Connection 생성하기

@@ -1,7 +1,6 @@
 package bitcamp.menu;
 
-import bitcamp.net.Prompt;
-
+import bitcamp.util.Prompt;
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -16,38 +15,34 @@ public class MenuGroup extends AbstractMenu {
   }
 
   @Override
-  public void execute(Prompt prompt) {
-    try {
-      String menuPath = getMenuPath();
+  public void execute() {
 
-      printMenus(prompt);
+    String menuPath = getMenuPath();
 
-      while (true) {
-        String command = prompt.input("%s>", menuPath);
-        if (command.equals("menu")) {
-          printMenus(prompt);
-          continue;
-        } else if (command.equals("0")) { // 이전 메뉴 선택
-          return;
-        }
+    printMenus();
 
-        try {
-          int menuNo = Integer.parseInt(command);
-          Menu menu = getMenu(menuNo - 1);
-          if (menu == null) {
-            prompt.println("유효한 메뉴 번호가 아닙니다.");
-            continue;
-          }
-
-          menu.execute(prompt);
-
-        } catch (NumberFormatException ex) {
-          prompt.println("숫자로 메뉴 번호를 입력하세요.");
-        }
+    while (true) {
+      String command = Prompt.input("%s>", menuPath);
+      if (command.equals("menu")) {
+        printMenus();
+        continue;
+      } else if (command.equals("0")) { // 이전 메뉴 선택
+        return;
       }
-    } catch (Exception e) {
-      e.printStackTrace();
-      prompt.println("실행 오류!");
+
+      try {
+        int menuNo = Integer.parseInt(command);
+        Menu menu = getMenu(menuNo - 1);
+        if (menu == null) {
+          System.out.println("유효한 메뉴 번호가 아닙니다.");
+          continue;
+        }
+
+        menu.execute();
+
+      } catch (NumberFormatException ex) {
+        System.out.println("숫자로 메뉴 번호를 입력하세요.");
+      }
     }
   }
 
@@ -55,13 +50,13 @@ public class MenuGroup extends AbstractMenu {
     exitMenuTitle = title;
   }
 
-  private void printMenus(Prompt prompt) {
-    prompt.printf("[%s]\n", title);
+  private void printMenus() {
+    System.out.printf("[%s]\n", title);
     int i = 1;
     for (Menu menu : children) {
-      prompt.printf("%d. %s\n", i++, menu.getTitle());
+      System.out.printf("%d. %s\n", i++, menu.getTitle());
     }
-    prompt.printf("0. %s\n", exitMenuTitle);
+    System.out.printf("0. %s\n", exitMenuTitle);
   }
 
   private String getMenuPath() {

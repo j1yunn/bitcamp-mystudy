@@ -2,7 +2,6 @@ package bitcamp.menu;
 
 
 import bitcamp.command.Command;
-import bitcamp.net.Prompt;
 
 public class MenuItem extends AbstractMenu {
 
@@ -22,11 +21,11 @@ public class MenuItem extends AbstractMenu {
   }
 
   @Override
-  public void execute(Prompt prompt) {
+  public void execute() {
     if (command != null) {
-      command.execute(title, prompt);
+      command.execute(title);
     } else {
-      prompt.println(title);
+      System.out.println(title);
     }
   }
 }
