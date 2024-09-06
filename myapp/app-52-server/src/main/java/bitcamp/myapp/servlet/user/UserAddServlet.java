@@ -1,7 +1,7 @@
-package bitcamp.myapp.servlet.project;
+package bitcamp.myapp.servlet.user;
 
-import bitcamp.myapp.dao.ProjectDao;
-import bitcamp.myapp.vo.Project;
+import bitcamp.myapp.dao.UserDao;
+import bitcamp.myapp.vo.User;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import javax.servlet.ServletContext;
@@ -12,33 +12,37 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/project/add")
-public class ProjectAddServlet extends HttpServlet {
+@WebServlet("/user/add")
+public class UserAddServlet extends HttpServlet {
 
-  private ProjectDao projectDao;
+  private UserDao userDao;
   private SqlSessionFactory sqlSessionFactory;
 
   @Override
   public void init() throws ServletException {
     ServletContext ctx = this.getServletContext();
-    this.projectDao = (ProjectDao) ctx.getAttribute("projectDao");
+    this.userDao = (UserDao) ctx.getAttribute("userDao");
     this.sqlSessionFactory = (SqlSessionFactory) ctx.getAttribute("sqlSessionFactory");
+  }
+
+  @Override
+  protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+    res.setContentType("text/html;charset=UTF-8");
+    req.getRequestDispatcher("/user/form.jsp").include(req, res);
   }
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
     try {
-      Project project = (Project) req.getSession().getAttribute("project");
-      projectDao.insert(project);
+      User user = new User();
+      user.setName(req.getParameter("name"));
+      user.setEmail(req.getParameter("email"));
+      user.setPassword(req.getParameter("password"));
+      user.setTel(req.getParameter("tel"));
 
-      if (project.getMembers() != null && project.getMembers().size() > 0) {
-        projectDao.insertMembers(project.getNo(), project.getMembers());
-      }
+      userDao.insert(user);
       sqlSessionFactory.openSession(false).commit();
-      res.sendRedirect("/project/list");
-
-      // 세션에 임시 보관했던 Project 객체를 제거한다.
-      req.getSession().removeAttribute("project");
+      res.sendRedirect("/user/list");
 
     } catch (Exception e) {
       sqlSessionFactory.openSession(false).rollback();
