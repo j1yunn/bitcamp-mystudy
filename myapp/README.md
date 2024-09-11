@@ -53,21 +53,8 @@
 ## 51. GET/POST 요청을 구분하기
 ## 52. 쿠키 및 세션 활용하기
 ## 53. 필터 활용하기
-
-
-## 62. 파일 업로드 다루기 - multipart/form-data POST 요청 파라미터 인코딩
-
-- Servlet API를 이용하여 multipart/form-data 파라미터를 다루는 방법
-- 회원 사진 추가
-  - DDL 변경
-
-
-
-
-
-
-
-## 66. EL 및 JSTL 활용하기
+## 54. 파일 업로드 다루기 - multipart/form-data POST 요청 처리
+## 55. EL 및 JSTL 활용하기
 
 - EL 사용법
 - JSTL 사용법
