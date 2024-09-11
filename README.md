@@ -7,10 +7,6 @@
 - 회의실 번호 / 암호: 210 866 3081 / 111222
 - 회의링크: https://whaleon.us/o/CSrtk1/84888a51da9d4f939e63eee37248fb28
 
-## 구글 meet 접속 정보
-
-- https://meet.google.com/zec-fijz-ftx
-
 ## 강의자료
 
 - 실습(https://github.com/eomjinyoung/bitcamp-study)
@@ -774,4 +770,69 @@
       - 클라이언트가 보낸 데이터 처리
       - GET 요청과 POST 요청 비교
       - HTTP 요청 프로토콜 분석
+      - 파일 업로드 처리: multipart/form-data 
 - 실습 프로젝트 
+
+## 71일차(2024-09-05,목)
+
+- NCP 실습 계정 발급
+- 이론
+  - 웹 프로그래밍
+    - 서블릿 기술 사용법(계속)
+      - HttpServlet 클래스의 역할
+      - loadOnStartup 옵션 사용법
+      - init-param과 context-param 사용법
+        - ServletConfig.getInitParameter()와 ServletContext.getInitParameter()
+      - 인클루드와 포워드 사용법
+      - 리프래시와 리다이렉트 사용법
+- 실습 프로젝트 
+  - 51. GET/POST 요청을 구분하기
+
+## 72일차(2024-09-06,금)
+
+- NCP 실습 계정 발급
+- 이론
+  - 웹 프로그래밍
+    - 서블릿 기술 사용법(계속)
+      - 서블릿 보관소 사용법: 
+        - ServletContext, HttpSession, ServletRequest, JspContext
+      - 쿠키 사용법
+      - 세션 사용법
+- 실습 프로젝트 
+  - 52. 쿠키 및 세션 활용하기
+- 최종 프로젝트
+  - 팀 결성
+    - 1팀: 권준성, 강슬기, 임상우, 최동인, 정찬우
+    - 2팀: 김재우, 강윤상, 권기윤, 김민수, 이우성, 양지윤
+    - 3팀: 백현기, 김재정, 이민석, 이재욱,  이건학, 신승민
+    - 4팀: 장혜정, 황민지, 이태정, 이가람, 김주연, 이선아,
+
+## 73일차(2024-09-09,월)
+
+- NCP 실습 계정 발급
+- 이론
+  - 웹 프로그래밍
+- 실습 프로젝트 
+  - 53. 필터 활용하기
+  - 54. 파일 업로드 다루기 - multipart/form-data POST 요청 처리
+- 최종 프로젝트
+  - 프로젝트 주제 선정
+
+## 74일차(2024-09-10,화)
+
+- NCP 실습 계정 발급
+- 이론
+  - 웹 프로그래밍
+    - JSP 사용법
+    - EL 사용법
+- 실습 프로젝트 
+- 최종 프로젝트
+  - 프로젝트 주제 선정(계속)
+  - 팀 별 git 저장소 생성 및 제출
+
+
+
+## 웨일온 접속 정보
+
+- 회의실 번호 / 암호: 210 866 3081 / 111222
+- 회의링크: https://whaleon.us/o/CSrtk1/84888a51da9d4f939e63eee37248fb28
