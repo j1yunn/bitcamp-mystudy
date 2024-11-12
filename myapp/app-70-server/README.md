@@ -16,7 +16,7 @@
 
 - 배포 파일 생성 및 실행 확인
   - build.gradle 변경
-  - $ java -jar myapp.jar 
+  - $ java -jar myapp.jar
 - 스프링부트 설정 파일을 개발과 운영으로 분리
   - application-dev.properties (개발)
   - application-prod.properties (운영)
@@ -44,7 +44,7 @@
   - root 사용자 로그인 불가하게 설정
     - # nano /etc/ssh/sshd_config
       - PermitRootLogin no
-  - yum update 실행 
+  - yum update 실행
   - JDK 설치
     - $ sudo yum install -y https://cdn.azul.com/zulu/bin/zulu-repo-1.0.0-1.noarch.rpm
     - $ sudo yum install zulu21-jdk
@@ -53,7 +53,7 @@
 - NCP 보안 파일 생성
   - ~$ mkdir config
   - ~$ cd config
-  - ~/config$ nano ncp.properties 
+  - ~/config$ nano ncp.properties
     - 로컬 파일의 내용 복사
 - 애플리케이션 배치 및 실행
   - ~$ mkdir git
@@ -65,8 +65,25 @@
 - MySQL ACL에 접속 서버의 IP 등록
   - NCP 콘솔에서 편집
 - Docker 엔진 설치
-
-
+- Docker Image 만들기
+  - Dockerfile 생성
+  - Docker 허브 리포지토리 생성
+    - 회원 가입
+    - "bitcamp" 개인 저장소 생성
+  - 이미지 빌드
+    - `docker build -t username/bitcamp:myapp .`
+  - 도커 허브 로그인
+    - `docker login`
+  - 도커 허브에 이미지 올리기
+    - `docker push eomjinyoung/bitcamp:myapp`
+- Docker 컨테이너 생성 및 실행
+- Jenkins CI/CD 자동화 빌드 도구 구축
+  - 도커 컨테이너를 이용한 Jenkins 설치 및 실행
+  - 자동 빌드 설정 및 빌드 테스트
+  - 깃허브 저장소와 연동
+- 젠킨스와 도커를 이용한 자동 배치
+  - 배치용 리눅스 서버 구축
+  - 자동 배치 수행
 
 ## 소스 파일
 
